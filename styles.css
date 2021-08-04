@@ -1,0 +1,158 @@
+@font-face {
+	font-family: Perfect DOS VGA;
+	src: url(//dl.dropbox.com/s/p3t4yi7hts3mt8j/Perfect%20DOS%20VGA%20437.ttf);
+}
+@font-face {
+	font-family: Pixel Mix;
+	src: url(//dl.dropbox.com/s/ouopdl0cvr66pv0/pixelmix.ttf);
+}
+@font-face {
+	font-family: pix M 8pt;
+	src: url(//dl.dropbox.com/s/c1lidj2je4fkyaa/M%208pt.ttf);
+}
+
+html,
+body {
+	background: #55aaaa;
+	margin: 0px;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+main {
+	margin: auto;
+	width: 50%;
+	display: block;
+	background: #ddd;
+	border-top: 1px solid #fafafa;
+	border-left: 1px solid #fafafa;
+	border-bottom: 1px solid #666;
+	border-right: 1px solid #666;
+	box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.2);
+	display: flex;
+	flex-flow: column nowrap;
+	animation: 0.66s linear forwards loadin;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 5px;
+	background-image: linear-gradient(250deg, #21d4fd 0%, #b721ff 100%);
+	margin: 5px;
+	font: 16px "Perfect DOS VGA";
+	color: #fafafa;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+#mydiv {
+	position: absolute;
+}
+#mydivheader {
+	cursor: move;
+}
+
+.title img {
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-right: 10px;
+}
+.title span {
+	display: inline;
+	margin-left: 7px;
+}
+
+.svgs,
+.title {
+	display: flex;
+	flex-flow: row nowrap;
+}
+
+.svgs img {
+	margin-left: 5px;
+	display: block;
+	width: 9px;
+	height: 9px;
+	background: #ddd;
+	padding: 3px;
+	border-top: 1px solid #fafafa;
+	border-left: 1px solid #fafafa;
+	border-bottom: 1px solid #aaa;
+	border-right: 1px solid #aaa;
+	box-shadow: 1px 1px #333;
+	cursor: pointer;
+}
+
+article {
+	padding: 10px;
+	background: #fafafa;
+	margin: 5px;
+	border: 1px solid #333;
+	box-shadow: 1px 1px #fafafa;
+	flex-grow: 1;
+	font: 400 16px "Perfect DOS VGA";
+	color: #222;
+	text-align: left;
+}
+
+.ribbon {
+	display: flex;
+	flex-flow: row wrap;
+}
+.ribbon span {
+	display: block;
+}
+.ribbon span:first-letter {
+	text-decoration: underline;
+}
+
+.tabcontent {
+	display: none;
+}
+
+button {
+	border: none;
+	background: none;
+	padding: 0.5rem 1rem;
+	cursor: pointer;
+	color: #222;
+	font: 16px "Perfect DOS VGA";
+}
+
+button:active span,
+button:hover span,
+button:focus span {
+	background-image: linear-gradient(250deg, #21d4fd 0%, #b721ff 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+}
+@keyframes loadin {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+*:focus {
+	outline: none !important;
+}
+
+/* MOBILE STYLING */
+@media screen and (max-width: 1000px) {
+	main {
+		width: 75%;
+	}
+}
+@media screen and (max-width: 360px) {
+	.title span {
+		display: none;
+	}
+}
